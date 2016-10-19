@@ -2,115 +2,235 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-        <link rel="stylesheet" href="css/thirdparty/normalize.css">
-        <link rel="stylesheet" href="css/thirdparty/bootstrap.css">
-        <link rel="stylesheet" href="css/main.css">
-
-        <script src="js/thirdparty/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Project name</a>
-            </div>
-            <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <form class="navbar-form navbar-right">
-                <div class="form-group">
-                  <input type="text" placeholder="Email" class="form-control">
-                </div>
-                <div class="form-group">
-                  <input type="password" placeholder="Password" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-success">Sign in</button>
-              </form>
-            </div><!--/.navbar-collapse -->
-          </div>
-        </div>
-
-        <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
-          <div class="container">
-            <h1>Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-          </div>
-        </div>
-
-        <div class="container">
-          <!-- Example row of columns -->
-          <div class="row">
-            <div class="col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-           </div>
-            <div class="col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-              <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-            </div>
-          </div>
-
-          <hr>
-
-          <footer>
-            <p>&copy; Company 2013</p>
-          </footer>
-        </div> <!-- /container -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="css/thirdparty/normalize.css">
+    <link rel="stylesheet" href="css/thirdparty/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/thirdparty/homeaway.css">
+    <script src="js/thirdparty/modernizr-2.6.2.min.js"></script>
+    <script src="js/thirdparty/jquery-1.10.2.min.js"></script>
+    <script src="js/thirdparty/handlebars.js"></script>
+    <script src="js/thirdparty/typeahead.js"></script>
+    <script src="js/thirdparty/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+    body {
+        padding-top: 0;
+        margin-top: 0;
+    }
     
+    .container-top {
+        background-color: #777;
+        height: 500px;
+    }
+    
+    .stab-searchbox form {
+        position: relative;
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 10px;
+        background: rgba(0, 0, 0, .2);
+    }
+    
+    .searchbox-input {
+        padding: 10px;
+        background-color: #555;
+        display: table;
+        width: 100%;
+    }
+    
+    input.form-control,
+    select.form-control {
+        border-radius: 0;
+        background-color: #fff;
+    }
+    
+    .stab-searchbox .searchbox-input,
+    .stab-searchbox .select {
+        float: left;
+        margin-right: 10px;
+    }
+    
+    .stab-searchbox .searchbox-select {
+        position: relative;
+        width: 15%;
+    }
+    
+    .icon-chevron-down {
+        position: absolute;
+        right: 27px;
+        top: -webkit-calc(50% - 9px);
+        z-index: 100;
+    }
+    
+    .searchbox-select {
+        position: relative;
+        height: 68px;
+    }
+    
+    .js-guests {
+        position: absolute !important;
+        top: 11px;
+        width: 87%;
+    }
+    
+    select.form-control {
+        background-image: none;
+        font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 15px;
+        color: #72787c;
+    }
+    
+    .searchbox-submit {
+        position: relative;
+        top: 10px;
+    }
+    
+    .has-icon i.form-control-icon {
+        top: 9px;
+        left: 5px
+    }
+    
+    .has-icon .form-control {
+        padding-left: 31px;
+    }
+    
+    .row.largearea {
+        height: 330px;
+        margin-top: 210px;
+    }
+    
+    #searchKeywords,
+    #searchKeywords:focus {
+        border: none;
+        width: 100%;
+    }
+    
+    .twitter-typeahead {
+        display: block !important;
+    }
+    
+    .tt-suggestion:first-child, .empty-message:first-child {
+      margin-top: 10px;
+    }
+    .tt-suggestion, .empty-message {
+        width: 500px;
+        background-color: #ffffff;
+        padding: 10px;
+        font-size: 13px;
+        font-family: inherit;
+        z-index: 100;
+        
+    }
+    /*.has-icon i.form-control-icon.suggestion {
+      left: -6px;
+      top: 7px;
+    }*/
+    .name {
+      padding-left: 0px;
+    }
+    </style>
+</head>
 
-        <script src="js/thirdparty/jquery-1.10.2.min.js"></script>
-        <script src="js/thirdparty/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+<body>
+    <div class="container-top">
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row largearea">
+                <div class="col-sm-12">
+                    <form class="js-searchForm" method="post">
+                        <div class="col-sm-4">
+                            <div id="custom-templates" class="searchbox-input searchbox-input-where-to form-group has-icon">
+                                <span class="twitter-typeahead" style="width: 100%; position: relative; display: block !important; direction: ltr;">
+                                  <input type="text" class="form-control js-destination js-launchModal tt-hint" tabindex="-1" readonly="" autocomplete="off" spellcheck="false" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(255, 255, 255, 255);">
+                                    <input  type="text" id="searchKeywords" class="form-control js-destination js-launchModal tt-input" tabindex="1" placeholder="Where do you want to go?" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;">
+                                      <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Roboto, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;">T</pre>
+                                      <span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;"></span>
+                                </span>
+                                <i class="icon-location form-control-icon" aria-hidden="true"></i>
+                                <label class="sr-only" for="searchKeywords">Where do you want to go?</label>
+                            </div>
+                            <div class="visible-xs searchbox-xs-btn-affordance pull-left">
+                                <div class="btn btn-lg btn-primary js-launchModal">
+                                    <i aria-hidden="true" class="icon-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="searchbox-input searchbox-input-arrive form-group has-icon">
+                                <input type="text" id="stab-searchbox-start-date" class="form-control js-startDate" tabindex="2" placeholder="Arrive">
+                                <i class="icon-calendar form-control-icon" aria-hidden="true"></i>
+                                <label class="sr-only" for="stab-searchbox-start-date">Arrive</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="searchbox-input searchbox-input-depart form-group has-icon">
+                                <input type="text" id="stab-searchbox-end-date" class="form-control js-endDate" tabindex="3" placeholder="Depart">
+                                <i class="icon-calendar form-control-icon" aria-hidden="true"></i>
+                                <label class="sr-only" for="stab-searchbox-end-date">Depart</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="searchbox-input searchbox-select icon-usergroup">
+                                <i class="icon-chevron-down icon-lightgray" aria-hidden="true"></i>
+                                <label class="sr-only" for="guests">Guest Selector</label>
+                                <select class="select-lg form-control js-guests" tabindex="4" id="guests" aria-hidden="true">
+                                    <option value="">Guests</option>
+                                    <option value="1">1+</option>
+                                    <option value="2">2+</option>
+                                    <option value="3">3+</option>
+                                    <option value="4">4+</option>
+                                    <option value="5">5+</option>
+                                    <option value="6">6+</option>
+                                    <option value="7">7+</option>
+                                    <option value="8">8+</option>
+                                    <option value="9">9+</option>
+                                    <option value="10">10+</option>
+                                    <option value="11">11+</option>
+                                    <option value="12">12+</option>
+                                    <option value="13">13 or more</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="btn btn-primary btn-lg searchbox-submit js-searchSubmit" data-effect="ripple" type="button" tabindex="5">
+                                Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+    </script>
+</body>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-    </body>
 </html>

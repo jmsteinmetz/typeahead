@@ -1,0 +1,54 @@
+[
+  {
+    "recent": true,
+    "type": "location",
+    "value": "New Orleans, LA",
+    "tokens": [
+      "New",
+      "Orleans",
+      "LA",
+      "e"
+    ]
+  },
+  {
+    "recent": true,
+    "type": "location",
+    "value": "Greater New Orleans",
+    "tokens": [
+      "New",
+      "Orleans",
+      "LA",
+      "Greater"
+    ]
+  },
+  {
+    "recent": false,
+    "type": "location",
+    "value": "Austin, TX",
+    "tokens": [
+      "Austin",
+      "TX"
+    ]
+  },
+  {
+    "recent": false,
+    "type": "location",
+    "value": "New York, NY",
+    "tokens": [
+      "New",
+      "York",
+      "NY"
+    ]
+  },
+  {
+    "recent": false,
+    "type": "buildings",
+    "value": "Great Wall of China",
+    "tokens": [
+      "Great",
+      "Wall",
+      "China",
+      "e"
+    ]
+  }
+]
